@@ -30,7 +30,11 @@ Il progetto è suddiviso in **quattro lezioni**, ognuna accompagnata da un file 
 - **Pygame** (libreria per lo sviluppo di giochi 2D)  
 ---
 ## Come eseguire il gioco  
-1. Assicurarsi di avere installato **Python 3**.  
-2. Installare la libreria Pygame con il comando:  
+1. Assicurarsi di avere installato **Python 3** e **Pygame**.  
+2. Installare Python con il comando:  
+  ```bash
+  pip install python
+3. Installare la libreria Pygame con il comando:  
   ```bash
   pip install pygame
+
