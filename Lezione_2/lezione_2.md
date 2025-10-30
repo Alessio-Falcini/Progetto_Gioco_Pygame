@@ -82,3 +82,10 @@ personaggio.y = max(0, min(personaggio.y, ALTEZZA_SCHERMO - ALTEZZA_PERSONAGGIO)
 - Controlliamo i tasti **W, A, S, D** per spostare il rettangolo nelle quattro direzioni.  
 
 - `velocita_personaggio` definisce di quanti pixel si muove il personaggio per frame.
+---
+
+## Note didattiche
+
+- Abbiamo introdotto l’**input da tastiera** e il **controllo dei bordi** dello schermo.  
+
+- Queste aggiunte rendono il personaggio **interattivo**, preparando la base per la **Lezione 3**, in cui aggiungeremo i **proiettili**
