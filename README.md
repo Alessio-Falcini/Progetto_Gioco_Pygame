@@ -4,6 +4,7 @@
 Questo progetto consiste nella realizzazione di un videogioco 2D sviluppato in **Python** utilizzando la libreria **Pygame**.  
 Il gioco presenta un personaggio controllato dal giocatore che può muoversi liberamente all’interno dello schermo e sparare proiettili verso nemici che appaiono casualmente.  
 L’obiettivo è colpire tutti i nemici evitando di farsi raggiungere da essi. Il progetto è stato sviluppato e spiegato passo dopo passo in quattro lezioni, ognuna dedicata a una fase specifica della realizzazione.
+
 ---
 ## Struttura del progetto  
 Il progetto è suddiviso in **quattro lezioni**, ognuna accompagnata da un file Python con il codice corrispondente e da una spiegazione dettagliata nel relativo README.
