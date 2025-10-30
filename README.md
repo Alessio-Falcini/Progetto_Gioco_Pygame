@@ -34,6 +34,7 @@ Il progetto è suddiviso in **quattro lezioni**, ognuna accompagnata da un file 
 2. Installare Python con il comando:  
   ```bash
   pip install python
+```
 3. Installare la libreria Pygame con il comando:  
   ```bash
   pip install pygame
