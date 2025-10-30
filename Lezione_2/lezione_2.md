@@ -63,6 +63,19 @@ if tasti[pygame.K_a]: personaggio.x -= velocita_personaggio
 if tasti[pygame.K_d]: personaggio.x += velocita_personaggio
 
 ```
+### 2. Limiti della finestra
+
+```python
+
+personaggio.x = max(0, min(personaggio.x, LARGHEZZA_SCHERMO - LARGHEZZA_PERSONAGGIO))
+
+personaggio.y = max(0, min(personaggio.y, ALTEZZA_SCHERMO - ALTEZZA_PERSONAGGIO))
+
+```
+
+- Impediamo al personaggio di uscire dai bordi della finestra.  
+
+- `max()` e `min()` limitano le coordinate X e Y alle dimensioni dello schermo
 
 - `pygame.key.get_pressed()` restituisce lo stato di tutti i tasti.  
 
