@@ -52,3 +52,31 @@ elif evento.type == pygame.MOUSEBUTTONDOWN:
 
 * Viene rilevato il **click sinistro del mouse** (`button == 1`);
 * Con `pygame.mouse.get_pos()` otteniamo la **posizione del cursore**.
+---
+
+### 3. Calcolo della direzione del proiettile
+
+```python
+direzione_x = mouse_x - personaggio.centerx
+direzione_y = mouse_y - personaggio.centery
+distanza = (direzione_x**2 + direzione_y**2)**0.5
+
+if distanza != 0:
+    direzione_x /= distanza
+    direzione_y /= distanza
+```
+
+* Si calcola la **direzione normalizzata (versore)** dal centro del personaggio al punto cliccato;
+* Questo permette ai proiettili di muoversi sempre alla **stessa velocità**, indipendentemente dalla distanza del bersaglio.
+
+---
+
+### 4. Creazione e memorizzazione del proiettile
+
+```python
+proiettile = pygame.Rect(...)
+lista_proiettili.append({'rect': proiettile, 'dx': direzione_x, 'dy': direzione_y})
+```
+
+* Ogni proiettile viene rappresentato come un rettangolo (\`pygame.Rect\`);
+* Viene salvato in una lista con la sua direzione (\`dx\`, \`dy\`).
