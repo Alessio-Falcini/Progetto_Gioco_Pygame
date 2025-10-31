@@ -34,9 +34,9 @@ python lezione_3.py
 
 ### 1. Importazione della libreria random
 
-\\\python
+```python
 import random
-\\\
+```
 
 Sebbene in questa fase non sia ancora usata per i nemici, la libreria viene importata in previsione delle prossime lezioni (creazione dei nemici casuali).
 
@@ -44,11 +44,11 @@ Sebbene in questa fase non sia ancora usata per i nemici, la libreria viene impo
 
 ### 2. Gestione dell’input del mouse
 
-\\\python
+```python
 elif evento.type == pygame.MOUSEBUTTONDOWN:
     if evento.button == 1:
         mouse_x, mouse_y = pygame.mouse.get_pos()
-\\\
+```
 
 * Viene rilevato il **click sinistro del mouse** (\`button == 1\`);
 * Con \`pygame.mouse.get_pos()\` otteniamo la **posizione del cursore**.
