@@ -9,7 +9,7 @@ I proiettili vengono diretti verso il punto cliccato e si muovono con velocità 
 
 ## File in questa lezione
 
-- \`lezione_3.py\` — codice sorgente contenente:
+- `lezione_3.py` — codice sorgente contenente:
   - meccanica di sparo con il mouse;
   - lista per la gestione dei proiettili;
   - calcolo della direzione e movimento dei proiettili;
@@ -21,9 +21,9 @@ I proiettili vengono diretti verso il punto cliccato e si muovono con velocità 
 
 Per avviare la lezione, eseguire dalla cartella del progetto:
 
-\`\`\`bash
+```bash
 python lezione_3.py
-\`\`\`
+```
 
 **Durante l’esecuzione:**
 * Il personaggio può muoversi con i tasti W, A, S, D;
