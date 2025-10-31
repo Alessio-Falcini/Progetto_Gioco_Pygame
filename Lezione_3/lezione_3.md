@@ -30,4 +30,25 @@ python lezione_3.py
 * Cliccando il tasto sinistro del mouse, vengono sparati proiettili gialli in direzione del cursore;
 * I proiettili spariti dallo schermo vengono rimossi automaticamente.
 
-***
+## Spiegazione passo-passo delle nuove funzionalità
+
+### 1. Importazione della libreria random
+
+\\\python
+import random
+\\\
+
+Sebbene in questa fase non sia ancora usata per i nemici, la libreria viene importata in previsione delle prossime lezioni (creazione dei nemici casuali).
+
+---
+
+### 2. Gestione dell’input del mouse
+
+\\\python
+elif evento.type == pygame.MOUSEBUTTONDOWN:
+    if evento.button == 1:
+        mouse_x, mouse_y = pygame.mouse.get_pos()
+\\\
+
+* Viene rilevato il **click sinistro del mouse** (\`button == 1\`);
+* Con \`pygame.mouse.get_pos()\` otteniamo la **posizione del cursore**.
