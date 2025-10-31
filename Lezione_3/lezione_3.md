@@ -50,5 +50,5 @@ elif evento.type == pygame.MOUSEBUTTONDOWN:
         mouse_x, mouse_y = pygame.mouse.get_pos()
 ```
 
-* Viene rilevato il **click sinistro del mouse** (\`button == 1\`);
-* Con \`pygame.mouse.get_pos()\` otteniamo la **posizione del cursore**.
+* Viene rilevato il **click sinistro del mouse** (`button == 1`);
+* Con `pygame.mouse.get_pos()` otteniamo la **posizione del cursore**.
