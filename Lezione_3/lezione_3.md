@@ -78,5 +78,5 @@ proiettile = pygame.Rect(...)
 lista_proiettili.append({'rect': proiettile, 'dx': direzione_x, 'dy': direzione_y})
 ```
 
-* Ogni proiettile viene rappresentato come un rettangolo (\`pygame.Rect\`);
-* Viene salvato in una lista con la sua direzione (\`dx\`, \`dy\`).
+* Ogni proiettile viene rappresentato come un rettangolo (`pygame.Rect`);
+* Viene salvato in una lista con la sua direzione (`dx`, `dy`).
