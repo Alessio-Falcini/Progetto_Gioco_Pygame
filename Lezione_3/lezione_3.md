@@ -80,3 +80,33 @@ lista_proiettili.append({'rect': proiettile, 'dx': direzione_x, 'dy': direzione_
 
 * Ogni proiettile viene rappresentato come un rettangolo (`pygame.Rect`);
 * Viene salvato in una lista con la sua direzione (`dx`, `dy`).
+---
+
+### 5. Movimento e rimozione dei proiettili
+
+```python
+for proiettile in lista_proiettili[:]:
+    proiettile['rect'].x += proiettile['dx'] * VELOCITA_PROIETTILE
+    proiettile['rect'].y += proiettile['dy'] * VELOCITA_PROIETTILE
+```
+
+* I proiettili vengono **spostati** ad ogni frame;
+* Se un proiettile esce dallo schermo, viene **rimosso** dalla lista per evitare spreco di memoria.
+
+---
+
+### 6. Disegno dei proiettili
+
+```python
+pygame.draw.circle(schermo, GIALLO, proiettile['rect'].center, DIMENSIONE_PROIETTILE // 2)
+```
+
+* Ogni proiettile viene rappresentato come un **cerchio giallo**;
+* Il centro del cerchio è quello del rettangolo associato.
+
+***
+
+## Note didattiche 📝
+
+* I concetti di **direzione normalizzata** e **liste di oggetti dinamici** sono fondamentali nei videogiochi;
+* Questa lezione prepara le basi per la prossima fase, dove verranno introdotti nemici e collisioni tra proiettili e nemici.
