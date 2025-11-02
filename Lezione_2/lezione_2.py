@@ -1,4 +1,3 @@
-
 # Autori: Alessio Falcini, Leonardo Occhirossi, Vittorio Cambiotti 
 # Lezione 2: Movimento del personaggio e limiti della finestra
  
