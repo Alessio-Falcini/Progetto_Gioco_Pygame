@@ -1,5 +1,3 @@
-# Autori: Alessio Falcini, Leonardo Occhirossi, Vittorio Cambiotti
-# Lezione 5: Collisioni tra proiettili e nemici
 import pygame
 import random
 import math
@@ -76,7 +74,7 @@ while gioco_attivo:
    if tasti[pygame.K_w]: personaggio.y -= velocita_personaggio
    if tasti[pygame.K_s]: personaggio.y += velocita_personaggio
    if tasti[pygame.K_a]: personaggio.x -= velocita_personaggio
-   if tasti[pygame.K_d]: personaggio.x += velocità_personaggio
+   if tasti[pygame.K_d]: personaggio.x += velocita_personaggio
    personaggio.x = max(0, min(personaggio.x, LARGHEZZA_SCHERMO - LARGHEZZA_PERSONAGGIO))
    personaggio.y = max(0, min(personaggio.y, ALTEZZA_SCHERMO - ALTEZZA_PERSONAGGIO))
    # Spawn nemici
@@ -101,7 +99,7 @@ while gioco_attivo:
    for nemico in nemici:
        for p in proiettili:
            battaglia_rect = pygame.Rect(p[0]-DIM_PROIETTILE//2, p[1]-DIM_PROIETTILE//2, DIM_PROIETTILE, DIM_PROIETTILE)
-           if nemico.colliderect(proiettile_rect):
+           if nemico.colliderect(battaglia_rect):
                nemici_da_rimuovere.append(nemico)
                proiettili_da_rimuovere.append(p)
    for nemico in nemici_da_rimuovere:
