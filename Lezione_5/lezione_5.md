@@ -1,20 +1,18 @@
-# Lezione 5 — Collisioni tra proiettili e nemici
+# Lezione 5 — Collisioni tra Proiettili e Nemici
 
 ## Obiettivo della lezione
 
-In questa lezione finalizziamo il gioco introducendo le **collisioni** : quando una vittoria colpisce un nemico, **entrambi vengono rimossi** dallo schermo.
-
-Questo permette di completare la dinamica principale del gioco.
+In questa lezione finalizziamo il gioco introducendo le **collisioni**: quando un proiettile colpisce un nemico, **entrambi vengono rimossi** dallo schermo. Questo permette di completare la dinamica principale del gioco.
 
 ---
 
 ## File in questa lezione
 
-- `lezione\_5.py` — codice eseguibile contenente:
-- movimento del personaggio;
-- sparo dei proiettili;
-- spawn e movimento dei nemici;
-- rilevamento e gestione delle collisioni-nemico.
+- **`lezione_5.py`** — codice eseguibile contenente:
+  - Movimento del personaggio
+  - Sparo dei proiettili
+  - Spawn e movimento dei nemici
+  - Rilevamento e gestione delle collisioni proiettile-nemico
 
 ---
 
@@ -23,41 +21,56 @@ Questo permette di completare la dinamica principale del gioco.
 Per eseguire la lezione:
 
 ```bash
-
-python lezione\_5.py
+python lezione_5.py
 ```
-Durante l'esecuzione:
 
-- Muoviti con W, A, S, D
-- Spara con il tasto sinistro del mouse
-- I nemici rossi appariranno ai bordi e si muoveranno verso di te;
-- Quando una competizione li colpisce, scompariranno.
+### Comandi durante l'esecuzione
 
-⸻
+- **W, A, S, D** — Muoviti in tutte le direzioni
+- **Tasto sinistro del mouse** — Spara
+- **Nemici rossi** — Appariranno ai bordi e si muoveranno verso di te
+- **Collisione** — Quando un proiettile colpisce un nemico, entrambi scompariranno
 
-Spiegazione funzionalità aggiunte
+---
 
-1. Collisione competizione-nemico
+## Spiegazione delle funzionalità aggiunte
 
+### 1. Collisione proiettile-nemico
+
+```python
 if nemico.colliderect(proiettile_rect):
+    nemici_da_rimuovere.append(nemico)
+    proiettili_da_rimuovere.append(p)
+```
 
-nemici_da_rimuovere.append(nemico)
+- **`pygame.Rect.colliderect()`** rileva l'intersezione tra due rettangoli
+- Se un proiettile colpisce un nemico, entrambi vengono aggiunti a liste temporanee per la rimozione
 
-proiettili_da_rimuovere.append(p)
+### 2. Rimozione sicura
 
-- pygame.Rect.colliderect() rileva l'intersezione tra due rettangoli.
-- Se un successo colpisce un nemico, entrambi vengono aggiunti alla lista temporanea per la rimozione.
+```python
+for nemico in nemici_da_rimuovere:
+    nemici.remove(nemico)
+for p in proiettili_da_rimuovere:
+    proiettili.remove(p)
+```
 
-2. Rimozione sicura
+- Rimuovere gli oggetti dalle liste **dopo** aver controllato tutte le collisioni evita errori di iterazione
+- Questo pattern previene crash dovuti alla modifica di liste durante l'iterazione
 
-per nemico in nemici_da_rimuovere: nemici.remove(nemico)
+---
 
-for p in proiettili_da_rimuovere: proiettili.remove(p)
+## Note didattiche
 
-- Rimuovere gli oggetti dalle liste dopo aver controllato tutte le collisioni evita errori di iterazione.
+Ora il gioco ha la dinamica completa: movimento, sparo, nemici e collisioni. Tutti gli elementi principali di un semplice gioco sparatutto sono stati implementati e funzionano correttamente insieme.
 
-⸻
+---
 
-Note didattiche
+## Prossimi passi
 
-- Ora il gioco ha la dinamica completa: movimento, sparo, nemici e collisione
+Possibili miglioramenti futuri:
+- Sistema di punteggio
+- Vite del giocatore
+- Difficoltà progressiva
+- Effetti sonori e particelle
+- Menu principale e schermata di game over
