@@ -59,7 +59,19 @@ for p in proiettili_da_rimuovere:
 - Questo pattern previene crash dovuti alla modifica di liste durante l'iterazione
 
 ---
+### 3. Creazione della collision rect
 
+```python
+battaglia_rect = pygame.Rect(p[0]-DIM_PROIETTILE//2, p[1]-DIM_PROIETTILE//2, 
+                             DIM_PROIETTILE, DIM_PROIETTILE)
+if nemico.colliderect(battaglia_rect):
+```
+
+- I proiettili sono memorizzati come liste `[x, y, dx, dy]` anziché come Rect
+- Creiamo un Rect al momento della collisione con le coordinate corrette (sottraiamo `DIM_PROIETTILE//2` perché il proiettile è centrato su `x, y`)
+- Questo permette di usare il metodo `colliderect()` per il rilevamento preciso
+
+---
 ## Note didattiche
 
 Ora il gioco ha la dinamica completa: movimento, sparo, nemici e collisioni. Tutti gli elementi principali di un semplice gioco sparatutto sono stati implementati e funzionano correttamente insieme.
