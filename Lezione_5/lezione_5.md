@@ -72,6 +72,25 @@ if nemico.colliderect(battaglia_rect):
 - Questo permette di usare il metodo `colliderect()` per il rilevamento preciso
 
 ---
+## Concetti chiave
+
+### Normalizzazione vettoriale
+
+Sia nel movimento dei nemici che nello sparo dei proiettili, utilizziamo la **normalizzazione del vettore**:
+
+``` python
+distanza = math.hypot(dx, dy)  # Calcola la lunghezza del vettore
+if distanza != 0:
+    dx, dy = dx / distanza, dy / distanza  # Normalizza
+```
+
+Questo garantisce che il movimento avvenga sempre alla stessa velocità, indipendentemente dalla distanza dal target.
+
+### Gestione della iterazione sicura
+
+Un pattern importante è raccogliere gli oggetti da eliminare in liste temporanee e poi rimuoverli **dopo** aver completato i controlli. Questo evita errori come "list changed size during iteration".
+
+---
 ## Note didattiche
 
 Ora il gioco ha la dinamica completa: movimento, sparo, nemici e collisioni. Tutti gli elementi principali di un semplice gioco sparatutto sono stati implementati e funzionano correttamente insieme.
