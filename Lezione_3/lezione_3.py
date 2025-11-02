@@ -1,4 +1,3 @@
-
 # Autori: Alessio Falcini, Leonardo Occhirossi, Vittorio Cambiotti
 # Lezione 3: Aggiunta della meccanica di sparo
 import pygame  # Libreria per creare videogiochi
