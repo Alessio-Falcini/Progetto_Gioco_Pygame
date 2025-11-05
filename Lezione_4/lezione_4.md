@@ -107,7 +107,10 @@ Usare `pygame.time.get_ticks()` è fondamentale per:
 - Renderizzare il gioco indipendente dal numero di frame
 
 ---
+## Immagini
+![immagine_1](../Lezione_4/videos/lezione_4.gif)
 
+---
 ## Note didattiche
 
 In questa lezione abbiamo introdotto **oggetti indipendenti dal giocatore**, che reagiscono al suo stato. Ogni nemico sa dove si trova il giocatore e può calcolare automaticamente il percorso verso di lui.
