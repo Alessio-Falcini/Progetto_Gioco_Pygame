@@ -91,6 +91,10 @@ Questo garantisce che il movimento avvenga sempre alla stessa velocità, indipen
 Un pattern importante è raccogliere gli oggetti da eliminare in liste temporanee e poi rimuoverli **dopo** aver completato i controlli. Questo evita errori come "list changed size during iteration".
 
 ---
+## Immagini
+![immagine_1](../Lezione_5/videos/lezione_5.gif)
+
+---
 ## Note didattiche
 
 Ora il gioco ha la dinamica completa: movimento, sparo, nemici e collisioni. Tutti gli elementi principali di un semplice gioco sparatutto sono stati implementati e funzionano correttamente insieme.
