@@ -103,8 +103,6 @@ pygame.draw.circle(schermo, GIALLO, proiettile['rect'].center, DIMENSIONE_PROIET
 
 * Ogni proiettile viene rappresentato come un **cerchio giallo**;
 * Il centro del cerchio è quello del rettangolo associato.
-
-***
 ---
 ## Immagini
 ![immagine_1](../Lezione_3/videos/lezione_3.gif)
