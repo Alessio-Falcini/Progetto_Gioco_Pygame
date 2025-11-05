@@ -83,7 +83,10 @@ personaggio.y = max(0, min(personaggio.y, ALTEZZA_SCHERMO - ALTEZZA_PERSONAGGIO)
 
 - `velocita_personaggio` definisce di quanti pixel si muove il personaggio per frame.
 ---
+## Immagini
+![immagine_1](../Lezione_2/videos/lezione_2.gif)
 
+---
 ## Note didattiche
 
 - Abbiamo introdotto l’**input da tastiera** e il **controllo dei bordi** dello schermo.  
