@@ -105,8 +105,12 @@ pygame.draw.circle(schermo, GIALLO, proiettile['rect'].center, DIMENSIONE_PROIET
 * Il centro del cerchio è quello del rettangolo associato.
 
 ***
+---
+## Immagini
+![immagine_1](../Lezione_3/videos/lezione_3.gif)
 
-## Note didattiche 📝
+---
+## Note didattiche 
 
 * I concetti di **direzione normalizzata** e **liste di oggetti dinamici** sono fondamentali nei videogiochi;
 * Questa lezione prepara le basi per la prossima fase, dove verranno introdotti nemici e collisioni tra proiettili e nemici.
