@@ -86,6 +86,7 @@ pygame.quit()
 ---
 ## Immagini
 ![immagine_1](../Lezione_1/images/lezione_1.png)
+---
 ## Note didattiche
 - In questa fase **non è ancora implementata la gestione dell’input** (movimento tramite tastiera) o altre logiche (nemici, proiettili).  
  Lo scopo è fornire una **base solida** su cui costruire nelle lezioni successive.  
