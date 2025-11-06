@@ -1,9 +1,12 @@
 # Lezione 4: Spawn e movimento dei nemici
+
 import pygame
 import math
 import random
+
 # --- Inizializzazione ---
 pygame.init()
+
 # --- Costanti e finestra ---
 LARGHEZZA_SCHERMO = 800
 ALTEZZA_SCHERMO = 600
@@ -13,6 +16,7 @@ BIANCO = (255, 255, 255)
 NERO = (0, 0, 0)
 ROSSO = (255, 0, 0)
 GIALLO = (255, 255, 0)
+
 # --- Personaggio ---
 LARGHEZZA_PERSONAGGIO = 40
 ALTEZZA_PERSONAGGIO = 80
@@ -20,6 +24,7 @@ velocita_personaggio = 5
 posizione_x = (LARGHEZZA_SCHERMO - LARGHEZZA_PERSONAGGIO) // 2
 posizione_y = (ALTEZZA_SCHERMO - ALTEZZA_PERSONAGGIO) // 2
 personaggio = pygame.Rect(posizione_x, posizione_y, LARGHEZZA_PERSONAGGIO, ALTEZZA_PERSONAGGIO)
+
 # --- Funzione movimento personaggio ---
 def muovi_personaggio(personaggio, velocita):
    tasti = pygame.key.get_pressed()
@@ -29,6 +34,7 @@ def muovi_personaggio(personaggio, velocita):
    if tasti[pygame.K_d]: personaggio.x += velocita
    personaggio.x = max(0, min(personaggio.x, LARGHEZZA_SCHERMO - LARGHEZZA_PERSONAGGIO))
    personaggio.y = max(0, min(personaggio.y, ALTEZZA_SCHERMO - ALTEZZA_PERSONAGGIO))
+   
 # --- Proiettili ---
 lista_proiettili = []  
 DIMENSIONE_PROIETTILE = 10
@@ -51,15 +57,16 @@ def muovi_proiettili(proiettili):
        if 0 < p[0] < LARGHEZZA_SCHERMO and 0 < p[1] < ALTEZZA_SCHERMO:
            nuovi_proiettili.append(p)
    return nuovi_proiettili
+
 # --- Nemici ---
 lista_nemici = []  
 DIMENSIONE_NEMICO = 40
 velocita_nemico = 2
-tempo_spawn = 2000        # Millisecondi per spawn
+tempo_spawn = 2000        
 ultimo_spawn = pygame.time.get_ticks()
-# TODO: Scrivere funzione genera_nemico() che ritorna pygame.Rect ai bordi dello schermo
-# TODO: Scrivere funzione muovi_nemico(nemico, giocatore) che muove il nemico verso il personaggio
-# TODO: Disegnare i nemici
+
+#Sviluppa la genrazione in maniera casuale dei nemici e il movimento del nemico verso il giocatore tramite la normalizzazione vettoriale
+
 # --- Orologio ---
 orologio = pygame.time.Clock()
 # --- Ciclo principale ---
@@ -72,9 +79,13 @@ while gioco_attivo:
            spara(evento.pos, personaggio)
    # --- Movimento personaggio ---
    muovi_personaggio(personaggio, velocita_personaggio)
-   # --- Spawn nemici e movimento nemici ---
-   # TODO: Controllare il tempo e aggiungere nuovi nemici
-   # TODO: Muovere ogni nemico verso il personaggio
+   
+   # TODO: Realizza lo spawn temporizzato dei nemici
+   
+   # Movimento nemici
+   for nemico in nemici:
+       muovi_nemico(nemico, personaggio)
+   
    # --- Movimento proiettili ---
    lista_proiettili = muovi_proiettili(lista_proiettili)
    # --- Disegno ---
@@ -86,3 +97,4 @@ while gioco_attivo:
    pygame.display.flip()
    orologio.tick(60)
 pygame.quit()
+
