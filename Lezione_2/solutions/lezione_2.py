@@ -1,6 +1,6 @@
 # Lezione 2: Movimento del personaggio e limiti della finestra
 
-import pygameù
+import pygame
 
 # --- Inizializzazione ---
 pygame.init()
