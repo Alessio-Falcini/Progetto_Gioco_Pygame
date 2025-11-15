@@ -109,3 +109,6 @@ Possibili miglioramenti futuri:
 - Difficoltà progressiva
 - Effetti sonori e particelle
 - Menu principale e schermata di game over
+
+---
+**Realizzata da Alessio Falcini**
