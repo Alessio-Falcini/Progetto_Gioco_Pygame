@@ -116,3 +116,6 @@ Usare `pygame.time.get_ticks()` è fondamentale per:
 In questa lezione abbiamo introdotto **oggetti indipendenti dal giocatore**, che reagiscono al suo stato. Ogni nemico sa dove si trova il giocatore e può calcolare automaticamente il percorso verso di lui.
 
 Il **prossimo passo** (Lezione 5) sarà gestire le **collisioni tra proiettili e nemici**, per eliminare i nemici colpiti e aggiungere il vero gameplay.
+
+---
+**Realizzata da Vittorio Cambiotti e Leonardo Occhirossi**
