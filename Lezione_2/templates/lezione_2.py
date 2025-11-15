@@ -30,12 +30,8 @@ while gioco_attivo:
    for evento in pygame.event.get():
        if evento.type == pygame.QUIT:
            gioco_attivo = False
-   # --- Movimento ---
-   # TODO: ottenere i tasti premuti con pygame.key.get_pressed()
-   # TODO: muovere il personaggio con i tasti W, A, S, D
-   #       W = su (-y), S = giù (+y), A = sinistra (-x), D = destra (+x)
-   # --- Limiti finestra ---
-   # TODO: impedire al personaggio di uscire dallo schermo
+# TODO: realizzare il movimento del personaggio e calcolare i limiti di schermo 
+
    # --- Disegno ---
    # TODO: riempire lo schermo con il colore NERO
    # TODO: disegnare il personaggio con pygame.draw.rect(schermo, BIANCO, personaggio)
