@@ -112,3 +112,6 @@ pygame.draw.circle(schermo, GIALLO, proiettile['rect'].center, DIMENSIONE_PROIET
 
 * I concetti di **direzione normalizzata** e **liste di oggetti dinamici** sono fondamentali nei videogiochi;
 * Questa lezione prepara le basi per la prossima fase, dove verranno introdotti nemici e collisioni tra proiettili e nemici.
+
+---
+**Realizzata da Alesio Falcini**
