@@ -120,9 +120,6 @@ while gioco_attivo:
 
    # --- Movimento proiettili ---
    lista_proiettili = muovi_proiettili(lista_proiettili)
-
-   # TODO: Chiamare la funzione di controllo collisioni e aggiornare le liste
-
    # --- Disegno ---
    schermo.fill(NERO)
    pygame.draw.rect(schermo, BIANCO, personaggio)
