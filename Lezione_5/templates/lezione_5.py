@@ -93,13 +93,6 @@ def muovi_nemico(nemico, giocatore):
        nemico.y += dy * velocita_nemico
 
 # TODO: Scrivere funzione che controlla le collisioni fra proiettili e nemici
-# La funzione deve:
-# 1. Iterare su tutti i nemici e tutti i proiettili
-# 2. Creare un pygame.Rect per ogni proiettile (centrato sul proiettile con dimensione DIMENSIONE_PROIETTILE)
-# 3. Usare colliderect() per controllare se il proiettile e il nemico si toccano
-# 4. Se c'è collisione, aggiungere nemico e proiettile a liste di rimozione
-# 5. Rimuovere i nemici e i proiettili dalle liste originali
-# 6. Ritornare le liste aggiornate
 
 # --- Orologio ---
 orologio = pygame.time.Clock()
