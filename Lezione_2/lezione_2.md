@@ -92,3 +92,6 @@ personaggio.y = max(0, min(personaggio.y, ALTEZZA_SCHERMO - ALTEZZA_PERSONAGGIO)
 - Abbiamo introdotto l’**input da tastiera** e il **controllo dei bordi** dello schermo.  
 
 - Queste aggiunte rendono il personaggio **interattivo**, preparando la base per la **Lezione 3**, in cui aggiungeremo i **proiettili**
+
+---
+**Realizzata da Vittorio Cambiotti**
