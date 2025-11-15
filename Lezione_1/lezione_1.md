@@ -92,3 +92,5 @@ pygame.quit()
  Lo scopo è fornire una **base solida** su cui costruire nelle lezioni successive.  
 - Usare `pygame.Rect` è comodo per rappresentare oggetti semplici.  
  Nelle lezioni successive vedremo come usare **immagini (surface)** al posto di rettangoli e come gestire **collisioni più complesse**.
+---
+**realizzara da Leonardo Occhirossi**
